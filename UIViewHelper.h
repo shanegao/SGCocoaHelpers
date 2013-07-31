@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <QuartzCore/QuartzCore.h>
 
-@interface UIView (Layout)
+@interface UIView (SG_Layout)
 - (CGFloat)x;
 - (void)setX:(CGFloat)xx;
 - (CGFloat)y;
@@ -20,7 +20,7 @@
 - (void)setHeight:(CGFloat)h;
 @end
 
-@interface ViewHelper : NSObject
+@interface UIViewHelper : NSObject
 /**
  *	create a UIImageView
  */

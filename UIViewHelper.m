@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 touchmob.com. All rights reserved.
 //
 
-#import "ViewHelper.h"
-@implementation UIView (Layout)
+#import "UIViewHelper.h"
+@implementation UIView (SG_Layout)
 - (CGFloat)x
 {
     return self.frame.origin.x;
@@ -54,13 +54,13 @@
 }
 @end
 
-@implementation ViewHelper
+@implementation UIViewHelper
 
 + (UIImageView *)imageViewWithFrame:(CGRect)frame image:(UIImage *)image
 {
     UIImageView *iv = [[UIImageView alloc] initWithFrame:frame];
     iv.image = image;
-    return [iv autorelease];
+    return iv;
 }
 + (UILabel *)labelWithFrame:(CGRect)labelFrame labelTxt:(NSString *)labelText textFont:(UIFont *)font textColor:(UIColor *)color
 {
@@ -69,7 +69,7 @@
     label.font = font;
     label.textColor = color;
     label.backgroundColor = [UIColor clearColor];
-    return [label autorelease];
+    return label;
 }
 
 + (UIButton *)imageButtonWithFrame:(CGRect)buttonFrame image:(UIImage *)image target:(id)target action:(SEL)action
@@ -114,7 +114,7 @@
 
 + (UIView *)viewWithFrame:(CGRect)frame contentColor:(UIColor *)contentColor borderColor:(UIColor *)borderColor borderWidth:(CGFloat)borderWidth cornerRadius:(CGFloat)cornerRadius
 {
-    UIView *view = [[[UIView alloc] initWithFrame:frame] autorelease];
+    UIView *view = [[UIView alloc] initWithFrame:frame];
     view.backgroundColor = contentColor;
     view.layer.borderWidth = borderWidth;
     view.layer.borderColor = borderColor.CGColor;
