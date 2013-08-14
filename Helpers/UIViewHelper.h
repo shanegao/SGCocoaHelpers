@@ -1,6 +1,6 @@
 //
-//  ViewHelper.h
-//  
+//  UIViewHelper.h
+//  SGCocoaHelpers
 //
 //  Created by Shane Gao on 5/14/13.
 //  Copyright (c) 2013 touchmob.com. All rights reserved.
@@ -10,14 +10,12 @@
 #import <QuartzCore/QuartzCore.h>
 
 @interface UIView (SG_Layout)
-- (CGFloat)x;
-- (void)setX:(CGFloat)xx;
-- (CGFloat)y;
-- (void)setY:(CGFloat)yy;
-- (CGFloat)width;
-- (void)setWidth:(CGFloat)w;
-- (CGFloat)height;
-- (void)setHeight:(CGFloat)h;
+@property(nonatomic) CGFloat left;
+@property(nonatomic) CGFloat right;
+@property(nonatomic) CGFloat top;
+@property(nonatomic) CGFloat bottom;
+@property(nonatomic) CGFloat width;
+@property(nonatomic) CGFloat height;
 @end
 
 @interface UIViewHelper : NSObject

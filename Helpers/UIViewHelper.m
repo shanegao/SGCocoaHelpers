@@ -1,6 +1,6 @@
 //
-//  ViewHelper.m
-//  
+//  UIViewHelper.m
+//  SGCocoaHelpers
 //
 //  Created by Shane Gao on 5/14/13.
 //  Copyright (c) 2013 touchmob.com. All rights reserved.
@@ -8,32 +8,52 @@
 
 #import "UIViewHelper.h"
 @implementation UIView (SG_Layout)
-- (CGFloat)x
+- (CGFloat)left
 {
-    return self.frame.origin.x;
+    return CGRectGetMinX(self.frame);
 }
 
-- (void)setX:(CGFloat)xx
+- (void)setLeft:(CGFloat)l
 {
     CGRect viewFrame = self.frame;
-    viewFrame.origin.x = xx;
-    self.frame = viewFrame;
-}
-- (CGFloat)y
-{
-    return self.frame.origin.y;
-}
-
-- (void)setY:(CGFloat)yy
-{
-    CGRect viewFrame = self.frame;
-    viewFrame.origin.y = yy;
+    viewFrame.origin.x = l;
     self.frame = viewFrame;
 }
 
+- (CGFloat)right
+{
+    return CGRectGetMaxX(self.frame);
+}
+
+- (void)setRight:(CGFloat)r
+{
+    self.left = r - self.width;
+}
+
+- (CGFloat)top
+{
+    return CGRectGetMinY(self.frame);
+}
+
+- (void)setTop:(CGFloat)t
+{
+    CGRect viewFrame = self.frame;
+    viewFrame.origin.y = t;
+    self.frame = viewFrame;
+}
+
+- (CGFloat)bottom
+{
+    return CGRectGetMaxY(self.frame);
+}
+
+- (void)setBottom:(CGFloat)b
+{
+    self.top = b - self.height;
+}
 - (CGFloat)width
 {
-    return self.frame.size.width;
+    return CGRectGetWidth(self.frame);
 }
 - (void)setWidth:(CGFloat)w
 {
@@ -44,7 +64,7 @@
 
 - (CGFloat)height
 {
-    return self.frame.size.height;
+    return CGRectGetHeight(self.frame);
 }
 - (void)setHeight:(CGFloat)h
 {
