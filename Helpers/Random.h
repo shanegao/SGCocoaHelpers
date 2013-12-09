@@ -9,10 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface Random : NSObject {
-
-}
-
+@interface Random : NSObject 
 +(NSInteger)createRandomsizeValueInt:(NSInteger)fromInt toInt:(NSInteger)toInt;
 +(double) createRandomsizeValueFloat:(double)fromFloat toFloat:(double)toFloat;
 
