@@ -11,3 +11,7 @@
 @interface ViewController : UIViewController
 
 @end
+
+@interface CloseButton : UIButton
+
+@end

@@ -16,6 +16,15 @@
 @property(nonatomic) CGFloat bottom;
 @property(nonatomic) CGFloat width;
 @property(nonatomic) CGFloat height;
+
+/**
+ *	create a UIView
+ */
++ (UIView *)viewWithFrame:(CGRect)frame
+             contentColor:(UIColor *)contentColor
+              borderColor:(UIColor *)borderColor
+              borderWidth:(CGFloat)borderWidth
+             cornerRadius:(CGFloat)cornerRadius;
 @end
 
 @interface UIViewHelper : NSObject
@@ -41,8 +50,4 @@
 + (UIButton *)buttonWithFrame:(CGRect)buttonFrame backgroundImage:(UIImage *)image title:(NSString *)buttonTitle font:(UIFont *)font titleColor:(UIColor *)color target:(id)target action:(SEL)action;
 
 + (UIButton *)buttonWithFrame:(CGRect)buttonFrame backgroundImage:(UIImage *)image target:(id)target action:(SEL)action;
-/**
- *	create a UIView
- */
-+ (UIView *)viewWithFrame:(CGRect)frame contentColor:(UIColor *)contentColor borderColor:(UIColor *)borderColor borderWidth:(CGFloat)borderWidth cornerRadius:(CGFloat)cornerRadius;
 @end

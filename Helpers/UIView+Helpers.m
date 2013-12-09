@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 touchmob.com. All rights reserved.
 //
 
-#import "UIViewHelper.h"
+#import "UIView+Helpers.h"
 @implementation UIView (SG_Layout)
 - (CGFloat)left
 {
@@ -72,6 +72,16 @@
     viewFrame.size.height = h;
     self.frame = viewFrame;
 }
+
++ (UIView *)viewWithFrame:(CGRect)frame contentColor:(UIColor *)contentColor borderColor:(UIColor *)borderColor borderWidth:(CGFloat)borderWidth cornerRadius:(CGFloat)cornerRadius
+{
+    UIView *view = [[UIView alloc] initWithFrame:frame];
+    view.backgroundColor = contentColor;
+    view.layer.borderWidth = borderWidth;
+    view.layer.borderColor = borderColor.CGColor;
+    view.layer.cornerRadius = cornerRadius;
+    return view;
+}
 @end
 
 @implementation UIViewHelper
@@ -132,14 +142,6 @@
     return button;
 }
 
-+ (UIView *)viewWithFrame:(CGRect)frame contentColor:(UIColor *)contentColor borderColor:(UIColor *)borderColor borderWidth:(CGFloat)borderWidth cornerRadius:(CGFloat)cornerRadius
-{
-    UIView *view = [[UIView alloc] initWithFrame:frame];
-    view.backgroundColor = contentColor;
-    view.layer.borderWidth = borderWidth;
-    view.layer.borderColor = borderColor.CGColor;
-    view.layer.cornerRadius = cornerRadius;
-    return view;
-}
+
 
 @end

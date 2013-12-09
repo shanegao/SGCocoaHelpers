@@ -6,7 +6,7 @@
 //  Copyright (c) 2012年 touchmob.com. All rights reserved.
 //
 
-#import "UIColorHelper.h"
+#import "UIColor+Helpers.h"
 
 @implementation UIColor (Helper)
 /**

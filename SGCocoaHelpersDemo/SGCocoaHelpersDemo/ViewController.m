@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "UIViewHelper.h"
+#import "UIView+Helpers.h"
 
 @interface ViewController ()
 
@@ -28,6 +28,9 @@
     testButton.right = 200.f;
     testButton.bottom = 320.f;
     NSLog(@"left:%f, right:%f, top:%f, bottom:%f", testButton.left, testButton.right, testButton.top, testButton.bottom);
+    
+    CloseButton *closeButton = [[CloseButton alloc] initWithFrame:CGRectMake(140, 30, 60, 60)];
+    [self.view addSubview:closeButton];
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,4 +43,13 @@
 {
     
 }
+@end
+
+@implementation CloseButton
+
+- (void)drawRect:(CGRect)rect
+{
+    
+}
+
 @end
