@@ -27,7 +27,7 @@ extern NSString* const kSmsNotSupportOnThisDevice;
 + (BOOL)connectedToNetwork;
 
 + (void)alert:(NSString *)msg;
-+ (void)makeCallWithWebView:(NSString *)aPhoneNumber;
+- (void)makeCallWithWebView:(NSString *)aPhoneNumber;
 + (void)makeCall:(NSString *)phoneNumber;
 + (void)sendSms:(NSString *)phoneNumber;
 + (void)sendMailByNumber:(NSString *)phoneNumber;
