@@ -21,7 +21,7 @@ NSString* const kSmsNotSupportOnThisDevice = @"该设备不支持短信功能";
 
 
 @interface QuickMethod ()
-@property (nonatomic, weak) UIWebView *callWebView;
+@property (nonatomic, strong) UIWebView *callWebView;
 @end
 
 @implementation QuickMethod
