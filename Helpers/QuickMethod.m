@@ -16,10 +16,25 @@
 #import "IPAdress.h"
 #import <AudioToolbox/AudioToolbox.h>
 
+NSString* const kCallNotSupportOnThisDevice = @"该设备不支持电话功能";
+NSString* const kSmsNotSupportOnThisDevice = @"该设备不支持短信功能";
+
+
+@interface QuickMethod ()
+@property (nonatomic, weak) UIWebView *callWebView;
+@end
+
 @implementation QuickMethod
 
-static NSString *kCallNotSupportOnThisDevice = @"该设备不支持电话功能";
-static NSString *kSmsNotSupportOnThisDevice = @"该设备不支持短信功能";
++ (instancetype)shared
+{
+	static id sharedInstance = nil;
+	static dispatch_once_t onceToken;
+	dispatch_once(&onceToken, ^{
+		sharedInstance = [[self alloc] init];
+	});
+	return sharedInstance;
+}
 
 + (BOOL)isPhone4
 {
@@ -68,16 +83,6 @@ static NSString *kSmsNotSupportOnThisDevice = @"该设备不支持短信功能";
     return newPhoneNoString;    
 }
 
-+ (void)makeCallWithWebView:(NSString *)aPhoneNumber
-{
-    if (![self isPhone]){
-        [QuickMethod alert:kCallNotSupportOnThisDevice];
-    } else {
-        NSString* numberAfterClear = [QuickMethod cleanPhoneNumber:aPhoneNumber];
-        UIWebView *phoneWebView = [[UIWebView alloc] init];
-        [phoneWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel://%@", numberAfterClear]]]];
-    }
-}
 
 + (void)makeCall:(NSString *)phoneNumber
 {
@@ -171,5 +176,17 @@ static NSString *kSmsNotSupportOnThisDevice = @"该设备不支持短信功能";
                           ntohl(tokenBytes[3]), ntohl(tokenBytes[4]), ntohl(tokenBytes[5]),
                           ntohl(tokenBytes[6]), ntohl(tokenBytes[7])];
     return hexToken;
+}
+
+- (void)makeCallWithWebView:(NSString *)aPhoneNumber
+{
+    if (![[self class] isPhone]){
+        [QuickMethod alert:kCallNotSupportOnThisDevice];
+    } else {
+        NSString* numberAfterClear = [QuickMethod cleanPhoneNumber:aPhoneNumber];
+        UIWebView *phoneWebView = [[UIWebView alloc] init];
+        [phoneWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel://%@", numberAfterClear]]]];
+        self.callWebView = phoneWebView;
+    }
 }
 @end

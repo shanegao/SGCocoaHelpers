@@ -11,9 +11,13 @@
 
 #define APP_VERSION [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
 
+extern NSString* const kCallNotSupportOnThisDevice;
+extern NSString* const kSmsNotSupportOnThisDevice;
+
 @interface QuickMethod : NSObject {
 
 }
++ (instancetype)shared;
 
 + (BOOL)isPhone4;
 + (BOOL)isPhone;
