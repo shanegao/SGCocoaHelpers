@@ -20,6 +20,9 @@
 + (NSString *)flattenHTML:(NSString *)html;
 
 + (NSString *)md5String;
+
+- (BOOL)containString:(NSString *)cString;
++ (NSString *)stringOfNotificationTokenData:(NSData *)deviceToken;
 @end
 
 

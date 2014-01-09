@@ -19,7 +19,6 @@
 NSString* const kCallNotSupportOnThisDevice = @"该设备不支持电话功能";
 NSString* const kSmsNotSupportOnThisDevice = @"该设备不支持短信功能";
 
-
 @interface QuickMethod ()
 @property (nonatomic, strong) UIWebView *callWebView;
 @end
@@ -34,31 +33,6 @@ NSString* const kSmsNotSupportOnThisDevice = @"该设备不支持短信功能";
 		sharedInstance = [[self alloc] init];
 	});
 	return sharedInstance;
-}
-
-+ (BOOL)isPhone4
-{
-    return [[UIScreen mainScreen] respondsToSelector:@selector(scale)] && [[UIScreen mainScreen] scale] == 2;
-}
-+ (BOOL)isPhone
-{
-    return UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone && [[[UIDevice currentDevice] model] hasPrefix:@"iPhone"];
-}
-+ (BOOL)isPad
-{
-    return UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad; 
-}
-
-+ (BOOL)isPod
-{
-    return UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone && [[[UIDevice currentDevice] model] hasPrefix:@"iPod"];
-}
-
-+ (BOOL)targetString:(NSString *)tString contains:(NSString *)cString
-{
-    //return [tString rangeOfString:cString].location != NSNotFound;
-	//[str rangeOfString:@"target"].length > 0
-	return [tString rangeOfString:cString].length > 0 && [tString rangeOfString:cString].length <= tString.length ;
 }
 
 + (void)alert:(NSString *)msg
@@ -86,7 +60,7 @@ NSString* const kSmsNotSupportOnThisDevice = @"该设备不支持短信功能";
 
 + (void)makeCall:(NSString *)phoneNumber
 {
-    if (![self isPhone]){
+    if (IS_IPHONE){
         [QuickMethod alert:kCallNotSupportOnThisDevice];
     } else {
         NSString* numberAfterClear = [QuickMethod cleanPhoneNumber:phoneNumber];    
@@ -98,7 +72,7 @@ NSString* const kSmsNotSupportOnThisDevice = @"该设备不支持短信功能";
 
 + (void)sendSms:(NSString *)phoneNumber
 {
-	if (![self isPhone]){
+	if (IS_IPHONE){
         [QuickMethod alert:kSmsNotSupportOnThisDevice];
     } else {
         NSString* numberAfterClear = [QuickMethod cleanPhoneNumber:phoneNumber];
@@ -168,19 +142,9 @@ NSString* const kSmsNotSupportOnThisDevice = @"该设备不支持短信功能";
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"itms://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=%ld&mt=8", appid]]];
 }
 
-+ (NSString *)stringOfNotificationTokenData:(NSData *)deviceToken
-{
-    const unsigned *tokenBytes = [deviceToken bytes];
-    NSString *hexToken = [NSString stringWithFormat:@"%08x%08x%08x%08x%08x%08x%08x%08x",
-                          ntohl(tokenBytes[0]), ntohl(tokenBytes[1]), ntohl(tokenBytes[2]),
-                          ntohl(tokenBytes[3]), ntohl(tokenBytes[4]), ntohl(tokenBytes[5]),
-                          ntohl(tokenBytes[6]), ntohl(tokenBytes[7])];
-    return hexToken;
-}
-
 - (void)makeCallWithWebView:(NSString *)aPhoneNumber
 {
-    if (![[self class] isPhone]){
+    if (IS_IPHONE){
         [QuickMethod alert:kCallNotSupportOnThisDevice];
     } else {
         NSString* numberAfterClear = [QuickMethod cleanPhoneNumber:aPhoneNumber];

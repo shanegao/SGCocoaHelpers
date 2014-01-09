@@ -195,6 +195,20 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
     return @"to be complete";
 }
 
+- (BOOL)containString:(NSString *)cString
+{
+    return [self rangeOfString:cString].length > 0 && [self rangeOfString:cString].length <= self.length ;
+}
+
++ (NSString *)stringOfNotificationTokenData:(NSData *)deviceToken
+{
+    const unsigned *tokenBytes = [deviceToken bytes];
+    NSString *hexToken = [NSString stringWithFormat:@"%08x%08x%08x%08x%08x%08x%08x%08x",
+                          ntohl(tokenBytes[0]), ntohl(tokenBytes[1]), ntohl(tokenBytes[2]),
+                          ntohl(tokenBytes[3]), ntohl(tokenBytes[4]), ntohl(tokenBytes[5]),
+                          ntohl(tokenBytes[6]), ntohl(tokenBytes[7])];
+    return hexToken;
+}
 @end
 
 
