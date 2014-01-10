@@ -144,13 +144,13 @@ NSString* const kSmsNotSupportOnThisDevice = @"该设备不支持短信功能";
 
 - (void)makeCallWithWebView:(NSString *)aPhoneNumber
 {
-    if (IS_IPHONE){
-        [QuickMethod alert:kCallNotSupportOnThisDevice];
-    } else {
+    if (IS_IPHONE) {
         NSString* numberAfterClear = [QuickMethod cleanPhoneNumber:aPhoneNumber];
         UIWebView *phoneWebView = [[UIWebView alloc] init];
         [phoneWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel://%@", numberAfterClear]]]];
         self.callWebView = phoneWebView;
+    } else {
+        [QuickMethod alert:kCallNotSupportOnThisDevice];
     }
 }
 @end
