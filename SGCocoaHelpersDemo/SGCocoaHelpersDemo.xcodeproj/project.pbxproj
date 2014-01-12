@@ -44,6 +44,7 @@
 		FB219A6417B0651E006D06EC /* SGCocoaHelpersDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB219A6317B0651E006D06EC /* SGCocoaHelpersDemoTests.m */; };
 		FB219A7217B065AD006D06EC /* UIColor+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = FB219A6F17B065AD006D06EC /* UIColor+Helpers.m */; };
 		FB219A7317B065AD006D06EC /* UIView+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = FB219A7117B065AD006D06EC /* UIView+Helpers.m */; };
+		FB5D5BC918821AA700D9C06E /* UIImageView+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5D5BC818821AA700D9C06E /* UIImageView+Helpers.m */; };
 		FBAEF211186D30D00097DA87 /* LocalNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FBAEF210186D30CF0097DA87 /* LocalNotificationManager.m */; };
 		FBFAAFF8185680740088F9C8 /* UIImage+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFAAFF7185680740088F9C8 /* UIImage+Helpers.m */; };
 /* End PBXBuildFile section */
@@ -103,6 +104,8 @@
 		FB219A6F17B065AD006D06EC /* UIColor+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Helpers.m"; sourceTree = "<group>"; };
 		FB219A7017B065AD006D06EC /* UIView+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Helpers.h"; sourceTree = "<group>"; };
 		FB219A7117B065AD006D06EC /* UIView+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Helpers.m"; sourceTree = "<group>"; };
+		FB5D5BC718821AA700D9C06E /* UIImageView+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Helpers.h"; sourceTree = "<group>"; };
+		FB5D5BC818821AA700D9C06E /* UIImageView+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Helpers.m"; sourceTree = "<group>"; };
 		FBAEF20F186D30CF0097DA87 /* LocalNotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalNotificationManager.h; sourceTree = "<group>"; };
 		FBAEF210186D30CF0097DA87 /* LocalNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalNotificationManager.m; sourceTree = "<group>"; };
 		FBFAAFF6185680740088F9C8 /* UIImage+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Helpers.h"; sourceTree = "<group>"; };
@@ -235,6 +238,8 @@
 				FB13996B17C45E1F00987DE7 /* QuickMethod.m */,
 				FBFAAFF6185680740088F9C8 /* UIImage+Helpers.h */,
 				FBFAAFF7185680740088F9C8 /* UIImage+Helpers.m */,
+				FB5D5BC718821AA700D9C06E /* UIImageView+Helpers.h */,
+				FB5D5BC818821AA700D9C06E /* UIImageView+Helpers.m */,
 				FB13996C17C45E1F00987DE7 /* Random.h */,
 				FB13996D17C45E1F00987DE7 /* Random.m */,
 				FB13997017C45E1F00987DE7 /* NSString+Helpers.h */,
@@ -354,6 +359,7 @@
 				FB219A7317B065AD006D06EC /* UIView+Helpers.m in Sources */,
 				FB13997817C45E1F00987DE7 /* FileManager.m in Sources */,
 				FB13998E17C45E1F00987DE7 /* NSString+Helpers.m in Sources */,
+				FB5D5BC918821AA700D9C06E /* UIImageView+Helpers.m in Sources */,
 				FB13997E17C45E1F00987DE7 /* LocationUtils.m in Sources */,
 				FB13997A17C45E1F00987DE7 /* IPAdress.c in Sources */,
 				FB13997C17C45E1F00987DE7 /* LocaleUtils.m in Sources */,
