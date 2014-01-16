@@ -115,4 +115,9 @@
     return [dateFormat stringFromDate: dateTmp];
 }
 
+- (NSDate *)dateAfterDay:(NSInteger)day
+{
+    return [[NSDate alloc] initWithTimeInterval:day*24*3600 sinceDate:self];
+}
+
 @end

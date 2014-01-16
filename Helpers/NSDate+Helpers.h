@@ -30,5 +30,7 @@
 + (NSDate *)nextDate:(NSDate *)date;
 + (NSDate *)previousDate:(NSDate *)date;
 
+- (NSDate *)dateAfterDay:(NSInteger)day;
+
 
 @end
