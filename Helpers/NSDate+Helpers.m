@@ -78,8 +78,8 @@
     NSDateComponents* comp = [self dateComponents:date];
     NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    NSString *dateString = [NSString stringWithFormat:@"%04d-%02d-%02d 00:00:00", 
-                            [comp year], [comp month], [comp day]];
+    NSString *dateString = [NSString stringWithFormat:@"%04ld-%02ld-%02ld 00:00:00", 
+                            (long)[comp year], (long)[comp month], (long)[comp day]];
     
     return [formatter dateFromString:dateString];
 }
@@ -90,8 +90,8 @@
     NSDateComponents* comp = [self dateComponents:date];
     NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    NSString *dateString = [NSString stringWithFormat:@"%04d-%02d-%02d 23:59:59", 
-                            [comp year], [comp month], [comp day]];
+    NSString *dateString = [NSString stringWithFormat:@"%04ld-%02ld-%02ld 23:59:59", 
+                            (long)[comp year], (long)[comp month], (long)[comp day]];
     return [formatter dateFromString:dateString];
 }
 

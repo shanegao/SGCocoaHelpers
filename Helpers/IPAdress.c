@@ -21,6 +21,7 @@
 #include <net/if.h>
 #include <errno.h>
 #include <net/if_dl.h>
+#include <net/ethernet.h>
 
 #define	min(a,b)	((a) < (b) ? (a) : (b))
 #define	max(a,b)	((a) > (b) ? (a) : (b))

@@ -41,7 +41,7 @@
                                                            format:&format
                                                  errorDescription:&errorDesc];
 	if (!result) {
-		NSLog(@"Error reading plist: %@, format: %d", errorDesc, format);
+		NSLog(@"Error reading plist: %@, format: %lu", errorDesc, format);
 	}
 	return result ;
 }
@@ -59,7 +59,7 @@
                                                                format:&format
                                                      errorDescription:&errorDesc];
         if (!result) {
-            NSLog(@"Error reading plist: %@, format: %d", errorDesc, format);
+            NSLog(@"Error reading plist: %@, format: %lu", errorDesc, format);
         }
 	}
 	
