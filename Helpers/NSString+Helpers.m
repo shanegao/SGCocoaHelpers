@@ -12,6 +12,11 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
 
 @implementation NSString (Helpers)
 
+- (NSURL *)URLValue
+{
+    return [NSURL URLWithString:[self stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+}
+
 - (NSString *)URLEncodedString 
 {
     return (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,

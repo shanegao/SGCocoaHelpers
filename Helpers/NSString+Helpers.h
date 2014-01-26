@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface NSString (Helpers)
-
+- (NSURL *)URLValue;
 - (NSString *)URLEncodedString ;
 - (NSString *)URLDecodedString;
 - (NSString *)encodeAsURIComponent;
