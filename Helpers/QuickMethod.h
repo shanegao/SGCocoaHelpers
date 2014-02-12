@@ -61,5 +61,5 @@ extern NSString* const kSmsNotSupportOnThisDevice;
 
 + (void)vibratePhone;
 + (void)openAppPageInAppStoreWithID:(long)appid;
-
+void on_main_thread(void (^b)());
 @end

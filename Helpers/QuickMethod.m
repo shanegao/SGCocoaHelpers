@@ -35,6 +35,12 @@ NSString* const kSmsNotSupportOnThisDevice = @"该设备不支持短信功能";
 	return sharedInstance;
 }
 
+void on_main_thread(void (^b)())
+{
+    if (NSThread.isMainThread) b();
+    else dispatch_sync(dispatch_get_main_queue(), b);
+}
+
 + (void)alert:(NSString *)msg
 {
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:msg
