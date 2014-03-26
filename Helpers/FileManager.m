@@ -10,6 +10,13 @@
 
 @implementation FileManager
 
++ (BOOL)isDirectory:(NSString *)filePath
+{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    BOOL isDir;
+    return [fileManager fileExistsAtPath:filePath isDirectory:&isDir] && isDir;
+}
+
 + (NSString *)resourcePath
 {
     return [[NSBundle mainBundle] resourcePath];

@@ -10,7 +10,7 @@
 
 
 @interface FileManager : NSObject
-
++ (BOOL)isDirectory:(NSString *)filePath;
 + (NSString *)resourcePath;
 + (NSString *)cachesPath;
 + (NSString *)documentPath;
