@@ -8,7 +8,7 @@
 
 @implementation ValidateUtils
 
-- (BOOL)validateMobile:(NSString *)mobileNum  
++ (BOOL)validateMobile:(NSString *)mobileNum  
 {  
     /** 
      * 手机号码 

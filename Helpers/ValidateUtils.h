@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ValidateUtils : NSObject
-- (BOOL)validateMobile:(NSString *)mobileNum;
++ (BOOL)validateMobile:(NSString *)mobileNum;
 @end
