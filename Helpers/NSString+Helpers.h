@@ -19,7 +19,7 @@
 + (NSString *)base64encode:(NSString*)str;
 + (NSString *)flattenHTML:(NSString *)html;
 
-+ (NSString *)md5String;
+- (NSString *)md5String;
 
 - (BOOL)containString:(NSString *)cString;
 + (NSString *)stringOfNotificationTokenData:(NSData *)deviceToken;

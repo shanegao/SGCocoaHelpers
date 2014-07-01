@@ -6,6 +6,8 @@
 //  Copyright 2010 touchmob.com. All rights reserved.
 //
 
+#import "ValidateUtils.h"
+
 @implementation ValidateUtils
 
 + (BOOL)validateMobile:(NSString *)mobileNum  

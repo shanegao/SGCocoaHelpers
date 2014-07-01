@@ -1,5 +1,5 @@
 //
-//  .h
+//  ValidateUtils.h
 //  TouchMobLib
 //
 //  Created by Shane Gao on 7/20/08.

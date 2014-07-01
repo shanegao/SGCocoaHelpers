@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "NSString+Helpers.h"
 
 @interface SGCocoaHelpersDemoTests : XCTestCase
 
@@ -28,7 +29,9 @@
 
 - (void)testExample
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    NSString *hello = [@"hello" md5String];
+    
+    XCTAssertNotNil(hello, @"");
 }
 
 @end
