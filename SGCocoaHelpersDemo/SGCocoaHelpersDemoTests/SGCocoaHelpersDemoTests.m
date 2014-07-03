@@ -27,11 +27,20 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testMD5
 {
     NSString *hello = [@"hello" md5String];
-    
+    NSLog(@"%@", hello);
     XCTAssertNotNil(hello, @"");
+}
+
+- (void)testPinyinValue
+{
+    NSString *hanzi = @"魑魅魍魉";
+    NSString *pinyin = [hanzi pinyinValue];
+    NSLog(@"%@:%@", hanzi, pinyin);
+    
+    XCTAssertNotNil(pinyin, @"not nil");
 }
 
 @end

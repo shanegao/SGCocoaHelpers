@@ -224,6 +224,23 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
                           ntohl(tokenBytes[6]), ntohl(tokenBytes[7])];
     return hexToken;
 }
+
+- (NSString *)pinyinValue
+{
+    NSMutableString *source = [self mutableCopy];
+    CFStringTransform((__bridge CFMutableStringRef)source, NULL, kCFStringTransformMandarinLatin, NO);
+    //CFStringTransform((__bridge CFMutableStringRef)source, NULL, kCFStringTransformStripDiacritics, NO);
+    return source;
+}
+
+- (NSString *)trimmingAllWhitespaceAndNewlineCharacters
+{
+    NSString *source = [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSArray *components = [source componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    components = [components filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self <> ''"]];
+    return [components componentsJoinedByString:@""];
+}
+
 @end
 
 

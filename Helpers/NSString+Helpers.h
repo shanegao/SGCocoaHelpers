@@ -23,6 +23,9 @@
 
 - (BOOL)containString:(NSString *)cString;
 + (NSString *)stringOfNotificationTokenData:(NSData *)deviceToken;
+
+- (NSString *)pinyinValue;
+- (NSString *)trimmingAllWhitespaceAndNewlineCharacters;
 @end
 
 
