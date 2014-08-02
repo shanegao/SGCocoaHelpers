@@ -42,6 +42,7 @@
 		FB219A5A17B0651E006D06EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB219A3917B0651E006D06EC /* UIKit.framework */; };
 		FB219A6217B0651E006D06EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB219A6017B0651E006D06EC /* InfoPlist.strings */; };
 		FB219A6417B0651E006D06EC /* SGCocoaHelpersDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB219A6317B0651E006D06EC /* SGCocoaHelpersDemoTests.m */; };
+		FBEABDEC198DA99600994232 /* SGUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEABDEB198DA99600994232 /* SGUIButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,8 @@
 		FB219A5F17B0651E006D06EC /* SGCocoaHelpersDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SGCocoaHelpersDemoTests-Info.plist"; sourceTree = "<group>"; };
 		FB219A6117B0651E006D06EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FB219A6317B0651E006D06EC /* SGCocoaHelpersDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGCocoaHelpersDemoTests.m; sourceTree = "<group>"; };
+		FBEABDEA198DA99600994232 /* SGUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGUIButton.h; sourceTree = "<group>"; };
+		FBEABDEB198DA99600994232 /* SGUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGUIButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +258,8 @@
 				FB1C032A1962D8B800D6E480 /* UIImageView+Helpers.m */,
 				FB1C032B1962D8B800D6E480 /* UIView+Helpers.h */,
 				FB1C032C1962D8B800D6E480 /* UIView+Helpers.m */,
+				FBEABDEA198DA99600994232 /* SGUIButton.h */,
+				FBEABDEB198DA99600994232 /* SGUIButton.m */,
 				FB1C032D1962D8B800D6E480 /* ValidateUtils.h */,
 				FB1C032E1962D8B800D6E480 /* ValidateUtils.m */,
 				FB1C032F1962D8B800D6E480 /* VersionChecker.h */,
@@ -381,6 +386,7 @@
 				FB1C03431962D8B800D6E480 /* ValidateUtils.m in Sources */,
 				FB1C033F1962D8B800D6E480 /* UIColor+Helpers.m in Sources */,
 				FB1C03321962D8B800D6E480 /* IPAdress.c in Sources */,
+				FBEABDEC198DA99600994232 /* SGUIButton.m in Sources */,
 				FB219A4617B0651E006D06EC /* AppDelegate.m in Sources */,
 				FB1C03421962D8B800D6E480 /* UIView+Helpers.m in Sources */,
 				FB219A4217B0651E006D06EC /* main.m in Sources */,

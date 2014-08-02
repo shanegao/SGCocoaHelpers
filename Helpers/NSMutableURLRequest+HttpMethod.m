@@ -27,7 +27,7 @@
                 [baseURLString stringByAppendingFormat:@"?%@", paramsString]];
 }
 
-- (void)setHTTPPostBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding
+- (void)setHTTPPostBody:(NSDictionary *)bodyDictionary dataUsingEncoding:(NSStringEncoding)dataEncoding isPercentEscapes:(BOOL)isPercentEscapes escapeUsingEncoding:(NSStringEncoding)encoding
 {
     self.HTTPMethod = @"POST";
     if (bodyDictionary.count == 0) return;
@@ -36,10 +36,13 @@
     
     for (NSString *key in [bodyDictionary keyEnumerator]) {
         NSString *value = bodyDictionary[key];
-        NSString *part = [NSString stringWithFormat:@"%@=%@", [key stringByAddingPercentEscapesUsingEncoding:encoding], [value stringByAddingPercentEscapesUsingEncoding:encoding]];
+        NSString *part = [NSString stringWithFormat:@"%@=%@",
+                          isPercentEscapes ? [key stringByAddingPercentEscapesUsingEncoding:encoding] : key,
+                          isPercentEscapes ? [value stringByAddingPercentEscapesUsingEncoding:encoding] : value
+                          ];
         [parts addObject:part];
     }
     
-    self.HTTPBody = [[parts componentsJoinedByString:@"&"] dataUsingEncoding:NSASCIIStringEncoding];
+    self.HTTPBody = [[parts componentsJoinedByString:@"&"] dataUsingEncoding:dataEncoding];
 }
 @end

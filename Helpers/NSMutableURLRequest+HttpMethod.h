@@ -12,6 +12,6 @@
 
 - (void)setHTTPParams:(NSDictionary *)paramDictionary baseURLString:(NSString *)baseURLString;
 
-- (void)setHTTPPostBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding;
+- (void)setHTTPPostBody:(NSDictionary *)bodyDictionary dataUsingEncoding:(NSStringEncoding)dataEncoding isPercentEscapes:(BOOL)isPercentEscapes escapeUsingEncoding:(NSStringEncoding)encoding;
 
 @end
