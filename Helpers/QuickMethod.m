@@ -43,8 +43,8 @@ void on_main_thread(void (^b)())
 
 + (void)alert:(NSString *)msg
 {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:msg
-                                                        message:@""
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil
+                                                        message:msg
                                                        delegate:nil
                                               cancelButtonTitle:NSLocalizedString(@"OK", @"确定")
                                               otherButtonTitles:nil, nil];
