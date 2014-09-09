@@ -135,7 +135,21 @@ void on_main_thread(void (^b)())
 	InitAddresses();
 	GetIPAddresses();
 	GetHWAddresses();
-	return [NSString stringWithFormat:@"%s", ip_names[1]];
+    int i;
+    NSString *deviceIP = nil;
+    for (i=0; i<MAXADDRS; ++i)
+    {
+        static unsigned long localHost = 0x7F000001;            // 127.0.0.1
+        unsigned long theAddr;
+        
+        theAddr = ip_addrs[i];
+        
+        if (theAddr == 0) break;
+        if (theAddr == localHost) continue;
+        //NSLog(@"Name: %s MAC: %s IP: %s\n", if_names[i], hw_addrs[i], ip_names[i]);
+        deviceIP = [NSString stringWithFormat:@"%s", ip_names[i]];
+    }
+    return deviceIP;
 }
 
 + (void)vibratePhone
