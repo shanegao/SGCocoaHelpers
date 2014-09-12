@@ -13,8 +13,8 @@
 
 + (void)load
 {
-    Method originMethod = class_getInstanceMethod([UICollectionView class], @selector(pointInside:withEvent:));
-    Method newMethod = class_getInstanceMethod([UICollectionView class], @selector(_pointInside:withEvent:));
+    Method originMethod = class_getInstanceMethod([UIButton class], @selector(pointInside:withEvent:));
+    Method newMethod = class_getInstanceMethod([UIButton class], @selector(_pointInside:withEvent:));
     method_exchangeImplementations(originMethod, newMethod);
 }
 
