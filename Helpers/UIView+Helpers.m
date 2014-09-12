@@ -73,6 +73,29 @@
     self.frame = viewFrame;
 }
 
+- (CGPoint)origin {
+    return self.frame.origin;
+}
+
+
+- (void)setOrigin:(CGPoint)origin {
+    CGRect frame = self.frame;
+    frame.origin = origin;
+    self.frame = frame;
+}
+
+
+- (CGSize)size {
+    return self.frame.size;
+}
+
+
+- (void)setSize:(CGSize)size {
+    CGRect frame = self.frame;
+    frame.size = size;
+    self.frame = frame;
+}
+
 + (UIView *)viewWithFrame:(CGRect)frame contentColor:(UIColor *)contentColor borderColor:(UIColor *)borderColor borderWidth:(CGFloat)borderWidth cornerRadius:(CGFloat)cornerRadius
 {
     UIView *view = [[UIView alloc] initWithFrame:frame];
