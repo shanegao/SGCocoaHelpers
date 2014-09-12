@@ -1,5 +1,5 @@
 //
-//  SGUIButton.h
+//  UIButton+EasyTapped
 //  SGCocoaHelpersDemo
 //
 //  Created by Shane Gao on 8/3/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SGUIButton : UIButton
+@interface UIButton (EasyTapped)
 
 @end
