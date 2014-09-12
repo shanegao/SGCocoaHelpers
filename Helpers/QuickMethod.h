@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import <sys/utsname.h>
 
 #define APP_VERSION [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]
@@ -40,6 +41,18 @@
 #define cx_pad(__X__) (IS_IPAD ? (__X__) : (IS_IPHONE_5 ? (__X__ * WIDTH_IPHONE_5 / WIDTH_IPAD) : (__X__ * WIDTH_IPHONE_4 / WIDTH_IPAD)))
 #define cy_pad(__Y__) (IS_IPAD ? (__Y__) : (__Y__ * HEIGHT_IPHONE / HEIGHT_IPAD))
 
+#define RGB(r, g, b)                        [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1.0]
+#define RGBA(r, g, b, a)                    [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+#define HEXCOLOR(c)                         [UIColor colorWithRed:((c>>16)&0xFF)/255.0 green:((c>>8)&0xFF)/255.0 blue:(c&0xFF)/255.0 alpha:1.0]
+
+#define ApplicationDelegate                 [[UIApplication sharedApplication] delegate])
+#define UserDefaults                        [NSUserDefaults standardUserDefaults]
+#define NavBarHeight                        self.navigationController.navigationBar.bounds.size.height
+#define TabBarHeight                        self.tabBarController.tabBar.bounds.size.height
+#define ScreenWidth                         [[UIScreen mainScreen] bounds].size.width
+#define ScreenHeight                        [[UIScreen mainScreen] bounds].size.height
+
+#define STR(string, args...)              	[NSString stringWithFormat:string, args]
 
 extern NSString* const kCallNotSupportOnThisDevice;
 extern NSString* const kSmsNotSupportOnThisDevice;
