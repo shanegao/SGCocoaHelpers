@@ -107,6 +107,15 @@
 }
 @end
 
+@implementation UIView (Helpers)
+
+- (void)removeAllSubviews
+{
+    [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+}
+
+@end
+
 @implementation UIViewHelper
 
 + (UIImageView *)imageViewWithFrame:(CGRect)frame image:(UIImage *)image

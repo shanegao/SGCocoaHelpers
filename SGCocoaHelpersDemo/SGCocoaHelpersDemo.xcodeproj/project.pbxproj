@@ -42,6 +42,7 @@
 		FB219A5A17B0651E006D06EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB219A3917B0651E006D06EC /* UIKit.framework */; };
 		FB219A6217B0651E006D06EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB219A6017B0651E006D06EC /* InfoPlist.strings */; };
 		FB219A6417B0651E006D06EC /* SGCocoaHelpersDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB219A6317B0651E006D06EC /* SGCocoaHelpersDemoTests.m */; };
+		FB37A7F719C6E3FE00905202 /* UIViewController+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = FB37A7F619C6E3FE00905202 /* UIViewController+Helpers.m */; };
 		FBEABDEC198DA99600994232 /* UIButton+EasyTapped.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEABDEB198DA99600994232 /* UIButton+EasyTapped.m */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +117,8 @@
 		FB219A5F17B0651E006D06EC /* SGCocoaHelpersDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SGCocoaHelpersDemoTests-Info.plist"; sourceTree = "<group>"; };
 		FB219A6117B0651E006D06EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FB219A6317B0651E006D06EC /* SGCocoaHelpersDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGCocoaHelpersDemoTests.m; sourceTree = "<group>"; };
+		FB37A7F519C6E3FE00905202 /* UIViewController+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Helpers.h"; sourceTree = "<group>"; };
+		FB37A7F619C6E3FE00905202 /* UIViewController+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Helpers.m"; sourceTree = "<group>"; };
 		FBEABDEA198DA99600994232 /* UIButton+EasyTapped.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+EasyTapped.h"; sourceTree = "<group>"; };
 		FBEABDEB198DA99600994232 /* UIButton+EasyTapped.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+EasyTapped.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -258,6 +261,8 @@
 				FB1C032A1962D8B800D6E480 /* UIImageView+Helpers.m */,
 				FB1C032B1962D8B800D6E480 /* UIView+Helpers.h */,
 				FB1C032C1962D8B800D6E480 /* UIView+Helpers.m */,
+				FB37A7F519C6E3FE00905202 /* UIViewController+Helpers.h */,
+				FB37A7F619C6E3FE00905202 /* UIViewController+Helpers.m */,
 				FBEABDEA198DA99600994232 /* UIButton+EasyTapped.h */,
 				FBEABDEB198DA99600994232 /* UIButton+EasyTapped.m */,
 				FB1C032D1962D8B800D6E480 /* ValidateUtils.h */,
@@ -381,6 +386,7 @@
 				FB1C033B1962D8B800D6E480 /* NSURLRequest+SOAP.m in Sources */,
 				FB1C033A1962D8B800D6E480 /* NSString+Helpers.m in Sources */,
 				FB1C03331962D8B800D6E480 /* LocaleUtils.m in Sources */,
+				FB37A7F719C6E3FE00905202 /* UIViewController+Helpers.m in Sources */,
 				FB1C03361962D8B800D6E480 /* LocationUtils.m in Sources */,
 				FB1C03381962D8B800D6E480 /* NSDate+Helpers.m in Sources */,
 				FB1C03431962D8B800D6E480 /* ValidateUtils.m in Sources */,

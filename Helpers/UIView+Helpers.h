@@ -28,6 +28,10 @@
              cornerRadius:(CGFloat)cornerRadius;
 @end
 
+@interface UIView (Helpers)
+- (void)removeAllSubviews;
+@end
+
 @interface UIViewHelper : NSObject
 /**
  *	create a UIImageView
