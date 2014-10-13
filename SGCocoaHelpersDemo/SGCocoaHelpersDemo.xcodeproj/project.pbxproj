@@ -44,6 +44,7 @@
 		FB219A6417B0651E006D06EC /* SGCocoaHelpersDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB219A6317B0651E006D06EC /* SGCocoaHelpersDemoTests.m */; };
 		FB37A7F719C6E3FE00905202 /* UIViewController+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = FB37A7F619C6E3FE00905202 /* UIViewController+Helpers.m */; };
 		FBEABDEC198DA99600994232 /* UIButton+EasyTapped.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEABDEB198DA99600994232 /* UIButton+EasyTapped.m */; };
+		FBF4574819EBF87800A1FAA2 /* UIViewController+BHTKeyboardNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF4574719EBF87800A1FAA2 /* UIViewController+BHTKeyboardNotifications.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +122,8 @@
 		FB37A7F619C6E3FE00905202 /* UIViewController+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Helpers.m"; sourceTree = "<group>"; };
 		FBEABDEA198DA99600994232 /* UIButton+EasyTapped.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+EasyTapped.h"; sourceTree = "<group>"; };
 		FBEABDEB198DA99600994232 /* UIButton+EasyTapped.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+EasyTapped.m"; sourceTree = "<group>"; };
+		FBF4574619EBF87800A1FAA2 /* UIViewController+BHTKeyboardNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BHTKeyboardNotifications.h"; sourceTree = "<group>"; };
+		FBF4574719EBF87800A1FAA2 /* UIViewController+BHTKeyboardNotifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BHTKeyboardNotifications.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +266,8 @@
 				FB1C032C1962D8B800D6E480 /* UIView+Helpers.m */,
 				FB37A7F519C6E3FE00905202 /* UIViewController+Helpers.h */,
 				FB37A7F619C6E3FE00905202 /* UIViewController+Helpers.m */,
+				FBF4574619EBF87800A1FAA2 /* UIViewController+BHTKeyboardNotifications.h */,
+				FBF4574719EBF87800A1FAA2 /* UIViewController+BHTKeyboardNotifications.m */,
 				FBEABDEA198DA99600994232 /* UIButton+EasyTapped.h */,
 				FBEABDEB198DA99600994232 /* UIButton+EasyTapped.m */,
 				FB1C032D1962D8B800D6E480 /* ValidateUtils.h */,
@@ -375,6 +380,7 @@
 				FB1C03351962D8B800D6E480 /* LocationManaer.m in Sources */,
 				FB219A4F17B0651E006D06EC /* ViewController.m in Sources */,
 				FB1C03341962D8B800D6E480 /* LocalNotificationManager.m in Sources */,
+				FBF4574819EBF87800A1FAA2 /* UIViewController+BHTKeyboardNotifications.m in Sources */,
 				FB1C03401962D8B800D6E480 /* UIImage+Helpers.m in Sources */,
 				FB1C033E1962D8B800D6E480 /* Random.m in Sources */,
 				FB1C03371962D8B800D6E480 /* MKMapView+Helpers.m in Sources */,
@@ -532,6 +538,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SGCocoaHelpersDemo/SGCocoaHelpersDemo-Prefix.pch";
 				INFOPLIST_FILE = "SGCocoaHelpersDemo/SGCocoaHelpersDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -545,6 +552,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SGCocoaHelpersDemo/SGCocoaHelpersDemo-Prefix.pch";
 				INFOPLIST_FILE = "SGCocoaHelpersDemo/SGCocoaHelpersDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

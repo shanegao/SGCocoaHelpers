@@ -17,4 +17,13 @@
         [subViewController removeFromParentViewController];
     }
 }
+
+- (void)switchStatusBarWithView:(UIView *)view barHidden:(BOOL)statusBarHidden
+{
+    [[UIApplication sharedApplication] setStatusBarHidden:statusBarHidden withAnimation:UIStatusBarAnimationFade];
+    float __alpha = statusBarHidden ? 1 : 0;
+    [UIView animateWithDuration:0.3 animations:^{
+        view.alpha = __alpha;
+    }];
+}
 @end

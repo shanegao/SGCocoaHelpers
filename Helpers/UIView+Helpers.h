@@ -30,6 +30,7 @@
 
 @interface UIView (Helpers)
 - (void)removeAllSubviews;
+- (UIView *)findSuperViewWithClass:(Class)superViewClass;
 @end
 
 @interface UIViewHelper : NSObject

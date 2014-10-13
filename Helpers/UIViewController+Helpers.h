@@ -10,4 +10,5 @@
 
 @interface UIViewController (Helpers)
 - (void)removeAllChildControllers;
+- (void)switchStatusBarWithView:(UIView *)view barHidden:(BOOL)statusBarHidden;
 @end
