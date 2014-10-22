@@ -54,6 +54,28 @@
 
 #define STR(string, args...)              	[NSString stringWithFormat:string, args]
 
+#if DEBUG_ENABLE
+#define NSLog( s, ... ) NSLog( @"[%@(method:%@ line:%d)]:\n%@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), __LINE__, [NSString stringWithFormat:(s),##__VA_ARGS__] )
+#else
+#define NSLog( s, ... )
+#endif
+
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
+    #define TEXTSIZE(text, font) [text length] > 0 ? [text \
+            sizeWithAttributes:@{NSFontAttributeName:font}] : CGSizeZero;
+#else
+    #define TEXTSIZE(text, font) [text length] > 0 ? [text sizeWithFont:font] : CGSizeZero;
+#endif
+
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
+    #define MULTILINE_TEXTSIZE(text, font, maxSize, mode) [text length] > 0 ? [text \
+boundingRectWithSize:maxSize options:(NSStringDrawingUsesLineFragmentOrigin) \
+attributes:@{NSFontAttributeName:font} context:nil].size : CGSizeZero;
+#else
+    #define MULTILINE_TEXTSIZE(text, font, maxSize, mode) [text length] > 0 ? [text \
+sizeWithFont:font constrainedToSize:maxSize lineBreakMode:mode] : CGSizeZero;
+#endif
+
 extern NSString* const kCallNotSupportOnThisDevice;
 extern NSString* const kSmsNotSupportOnThisDevice;
 
