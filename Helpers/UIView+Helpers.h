@@ -10,12 +10,14 @@
 #import <QuartzCore/QuartzCore.h>
 
 @interface UIView (SG_Layout)
-@property(nonatomic) CGFloat left;
-@property(nonatomic) CGFloat right;
-@property(nonatomic) CGFloat top;
-@property(nonatomic) CGFloat bottom;
-@property(nonatomic) CGFloat width;
-@property(nonatomic) CGFloat height;
+@property (nonatomic) CGFloat centerX;
+@property (nonatomic) CGFloat centerY;
+@property (nonatomic) CGFloat left;
+@property (nonatomic) CGFloat right;
+@property (nonatomic) CGFloat top;
+@property (nonatomic) CGFloat bottom;
+@property (nonatomic) CGFloat width;
+@property (nonatomic) CGFloat height;
 @property (nonatomic) CGPoint origin;
 @property (nonatomic) CGSize size;
 /**

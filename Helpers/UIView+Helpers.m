@@ -8,6 +8,31 @@
 
 #import "UIView+Helpers.h"
 @implementation UIView (SG_Layout)
+
+- (CGFloat)centerX
+{
+    return self.center.x;
+}
+
+- (void)setCenterX:(CGFloat)xx
+{
+    CGPoint pt = self.center;
+    pt.x = xx;
+    self.center = pt;
+}
+
+- (CGFloat)centerY
+{
+    return self.center.y;
+}
+
+- (void)setCenterY:(CGFloat)yy
+{
+    CGPoint pt = self.center;
+    pt.y = yy;
+    self.center = pt;
+}
+
 - (CGFloat)left
 {
     return CGRectGetMinX(self.frame);
